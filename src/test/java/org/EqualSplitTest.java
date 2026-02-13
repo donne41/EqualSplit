@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class EqualSplitTest {
 
 
-    EqualSplit EQ = new EqualSplit();
+    EqualSplit ES = new EqualSplit();
 
     List<Person> getExampleList() {
         Person p1 = new Person("One", 100);
@@ -20,22 +20,53 @@ class EqualSplitTest {
         Person p3 = new Person("Three", 300);
         Person p4 = new Person("Four", 400);
         Person p5 = new Person("Five", 500);
-        return List.of(p1, p2, p3, p4, p5);
+        Person p6 = new Person("Six", 600);
+        return List.of(p1, p2, p3, p4, p5, p6);
     }
 
     @Test
     void getSum() {
-        var result = EQ.getSum(getExampleList());
+        var result = ES.getSum(getExampleList());
 
-        assertThat(result).isEqualTo(1500);
+        assertThat(result).isEqualTo(2100);
     }
 
     @Test
     void getPortionSize() {
         List<Person> list = getExampleList();
-        var sum = EQ.getSum(list);
-        var result = EQ.getPortionSize(list, sum);
+        var sum = ES.getSum(list);
+        var result = ES.getPortionSize(list, sum);
 
-        assertThat(result).isEqualTo(300);
+        assertThat(result).isEqualTo(350);
     }
+
+    @Test
+    void getPersonOwnedShouldReturnZeroWhenSummerized() {
+        var list = getExampleList();
+        var sum = ES.getSum(list);
+        var portion = ES.getPortionSize(list, sum);
+        ES.setMoneyOwned(list, portion);
+        double result = 0;
+        for (Person p : list) {
+            result += p.getMoneyOwnd();
+        }
+        assertThat(result).isZero();
+    }
+
+    @Test
+    void getAmountOfsentMoney() {
+        var list = getExampleList();
+        var sum = ES.getSum(list);
+        var portion = ES.getPortionSize(list, sum);
+        ES.setMoneyOwned(list, portion);
+        ES.setPersonCategoryList(list);
+        var transList = ES.getDebtCollect();
+        double totalSent = 0;
+        for (Transaction sent : transList) {
+            totalSent += sent.getMoney();
+        }
+
+        assertThat(totalSent).isEqualTo(450);
+    }
+
 }
