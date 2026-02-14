@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="get transaction list for money sent, and using resultSplit to present result nicely soon">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/CliRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/SplitResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Transaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/CliRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/CliRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/EqualSplit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/EqualSplit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/EqualSplitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/EqualSplitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +56,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.CliRunner.executor": "Run",
+    "JUnit.EqualSplitTest.executor": "Run",
     "JUnit.EqualSplitTest.getAmountOfsentMoney.executor": "Run",
     "JUnit.EqualSplitTest.getPersonOwned.executor": "Run",
     "JUnit.EqualSplitTest.getPortionSize.executor": "Run",
@@ -93,7 +93,20 @@
       <recent name="org" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EqualSplitTest">
+  <component name="RunManager" selected="Application.CliRunner">
+    <configuration name="CliRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.CliRunner" />
+      <module name="EqualSplit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EqualSplitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EqualSplit" />
       <extension name="coverage">
@@ -157,29 +170,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EqualSplitTest.getSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="EqualSplit" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org" />
-      <option name="MAIN_CLASS_NAME" value="org.EqualSplitTest" />
-      <option name="METHOD_NAME" value="getSum" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CliRunner" />
         <item itemvalue="JUnit.EqualSplitTest" />
         <item itemvalue="JUnit.EqualSplitTest.getAmountOfsentMoney" />
         <item itemvalue="JUnit.EqualSplitTest.getPersonOwned" />
         <item itemvalue="JUnit.EqualSplitTest.getPortionSize" />
-        <item itemvalue="JUnit.EqualSplitTest.getSum" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +198,8 @@
       <workItem from="1770841205997" duration="4151000" />
       <workItem from="1770889214218" duration="20000" />
       <workItem from="1770995247771" duration="1431000" />
-      <workItem from="1771008099081" duration="6215000" />
+      <workItem from="1771008099081" duration="11535000" />
+      <workItem from="1771061008429" duration="1924000" />
     </task>
     <task id="LOCAL−00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -238,7 +236,14 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1770844737508</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="get transaction list for money sent, and using resultSplit to present result nicely soon">
+      <option name="closed" value="true" />
+      <created>1771014691591</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1771014691592</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,9 +268,24 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/CliRunner.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/CliRunner.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/EqualSplit.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="3" />
+          <line>67</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/EqualSplit.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

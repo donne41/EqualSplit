@@ -34,4 +34,11 @@ public class Person {
     public void setDebt(double debt) {
         this.debt = debt;
     }
+
+    @Override
+    public String toString() {
+        return "Person" +
+                " name=" + name + '\'' +
+                ", moneySpent=" + moneySpent;
+    }
 }

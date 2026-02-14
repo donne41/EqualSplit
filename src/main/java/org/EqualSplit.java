@@ -1,6 +1,7 @@
 package org;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class EqualSplit {
@@ -38,6 +39,8 @@ public class EqualSplit {
                 creditGroup.add(p);
             }
         }
+        debitGroup.sort(Comparator.comparingDouble(Person::getDebt));
+        creditGroup.sort(Comparator.comparingDouble(Person::getDebt).reversed());
     }
 
     public List<Transaction> getDebtCollect() {
@@ -69,6 +72,7 @@ public class EqualSplit {
         var sum = getSum(group);
         var portion = getPortionSize(group, sum);
         setMoneyOwned(group, portion);
+        setPersonCategoryList(group);
         var transactionList = getDebtCollect();
         return new SplitResult(sum, portion, transactionList);
     }
