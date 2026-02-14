@@ -5,13 +5,20 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CliRunner {
-    Scanner sc;
+    private Scanner sc;
     List<Person> list = new ArrayList<>();
     EqualSplit equalSplit = new EqualSplit();
     List<SplitResult> history = new ArrayList<>();
 
-    void main() {
+    public CliRunner(Scanner scanner) {
+        sc = scanner;
+    }
+
+    public CliRunner() {
         sc = new Scanner(System.in);
+    }
+
+    void main() {
         boolean badInput = true;
         System.out.printf("""
                 Welcome to EqualSplit, Here you can easily calculate a share everybody is support to share
@@ -27,12 +34,8 @@ public class CliRunner {
                     5) calculate
                     9) exit
                     """);
-            int i = 0;
-            i = sc.nextInt();
-            if (i < 0 | i > 9) {
-                System.out.println("bad input");
-                continue;
-            }
+            String input = sc.nextLine();
+            int i = checkInput(input);
             switch (i) {
                 case 1 -> addPerson();
                 case 2 -> editPerson();
@@ -45,6 +48,16 @@ public class CliRunner {
 
         } while (badInput);
 
+    }
+
+    private int checkInput(String input) {
+        int i = 0;
+        try {
+            i = Integer.parseInt(input);
+        } catch (NumberFormatException _) {
+            i = 20;
+        }
+        return i;
     }
 
     private void viewList() {

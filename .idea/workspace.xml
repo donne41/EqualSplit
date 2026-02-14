@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="get transaction list for money sent, and using resultSplit to present result nicely soon">
+    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="result printer">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/CliRunnerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/CliRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/CliRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/EqualSplit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/EqualSplit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="GitHub Workflow" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -57,6 +56,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.CliRunner.executor": "Run",
+    "JUnit.CliRunnerTest.addPersonShouldIncreaseGroupSize.executor": "Run",
     "JUnit.EqualSplitTest.executor": "Run",
     "JUnit.EqualSplitTest.getAmountOfsentMoney.executor": "Run",
     "JUnit.EqualSplitTest.getPersonOwned.executor": "Run",
@@ -93,7 +93,7 @@
       <recent name="org" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CliRunner">
+  <component name="RunManager" selected="JUnit.CliRunnerTest.addPersonShouldIncreaseGroupSize (1)">
     <configuration name="CliRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.CliRunner" />
       <module name="EqualSplit" />
@@ -103,6 +103,38 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CliRunnerTest.addPersonShouldIncreaseGroupSize (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EqualSplit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org" />
+      <option name="MAIN_CLASS_NAME" value="org.CliRunnerTest" />
+      <option name="METHOD_NAME" value="addPersonShouldIncreaseGroupSize(int,java.lang.String,double,int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CliRunnerTest.addPersonShouldIncreaseGroupSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EqualSplit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org" />
+      <option name="MAIN_CLASS_NAME" value="org.CliRunnerTest" />
+      <option name="METHOD_NAME" value="addPersonShouldIncreaseGroupSize(int,java.lang.String,double)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -138,45 +170,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EqualSplitTest.getPersonOwned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="EqualSplit" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org" />
-      <option name="MAIN_CLASS_NAME" value="org.EqualSplitTest" />
-      <option name="METHOD_NAME" value="getPersonOwned" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EqualSplitTest.getPortionSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="EqualSplit" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org" />
-      <option name="MAIN_CLASS_NAME" value="org.EqualSplitTest" />
-      <option name="METHOD_NAME" value="getPortionSize" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CliRunnerTest.addPersonShouldIncreaseGroupSize (1)" />
+        <item itemvalue="JUnit.CliRunnerTest.addPersonShouldIncreaseGroupSize" />
         <item itemvalue="Application.CliRunner" />
         <item itemvalue="JUnit.EqualSplitTest" />
         <item itemvalue="JUnit.EqualSplitTest.getAmountOfsentMoney" />
-        <item itemvalue="JUnit.EqualSplitTest.getPersonOwned" />
-        <item itemvalue="JUnit.EqualSplitTest.getPortionSize" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +199,7 @@
       <workItem from="1770889214218" duration="20000" />
       <workItem from="1770995247771" duration="1431000" />
       <workItem from="1771008099081" duration="11535000" />
-      <workItem from="1771061008429" duration="1924000" />
+      <workItem from="1771061008429" duration="4035000" />
     </task>
     <task id="LOCAL−00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -243,7 +243,14 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1771014691592</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="result printer">
+      <option name="closed" value="true" />
+      <created>1771062971655</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1771062971655</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +262,8 @@
     <MESSAGE value="add mockito dependency" />
     <MESSAGE value="add getSum and average with tests&#10;implement person class" />
     <MESSAGE value="get transaction list for money sent, and using resultSplit to present result nicely soon" />
-    <option name="LAST_COMMIT_MESSAGE" value="get transaction list for money sent, and using resultSplit to present result nicely soon" />
+    <MESSAGE value="result printer" />
+    <option name="LAST_COMMIT_MESSAGE" value="result printer" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -269,12 +277,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/CliRunner.java</url>
-          <line>58</line>
+          <line>70</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/CliRunner.java</url>
-          <line>86</line>
+          <line>98</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
