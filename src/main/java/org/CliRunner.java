@@ -113,6 +113,34 @@ public class CliRunner {
         }
     }
     private void removePerson() {
+        System.out.println("Enter name or index of person to be removed");
+        String input = sc.nextLine().trim();
+        int index = -1;
+        if (input.matches("\\d")) {
+            index = Integer.parseInt(input);
+        }
+        if (index < 0) {
+            var person = list.stream().filter(
+                    p -> {
+                        return p.getName().matches(input);
+                    }).findFirst().get();
+            System.out.println("Remove person: " + person.getName() + " " + person.getMoneySpent());
+            System.out.println("1) yes \nany) Exit");
+            String answer = sc.nextLine().trim();
+            if (answer.matches("1")) {
+                list.remove(person);
+                System.out.println("Removed person");
+            }
+        } else {
+            var person = list.get(index);
+            System.out.println("Remove person: " + person.getName() + " " + person.getMoneySpent());
+            System.out.println("1) yes \nany) Exit");
+            String answer = sc.nextLine().trim();
+            if (answer.matches("1")) {
+                list.remove(person);
+                System.out.println("Removed person");
+            }
+        }
 
     }
 
@@ -130,13 +158,4 @@ public class CliRunner {
         System.out.println("Total spent: " + result.sum + " Share amount: " + result.portion);
     }
 
-    List<Person> getExampleList() {
-        Person p1 = new Person("One", 100);
-        Person p2 = new Person("Two", 200);
-        Person p3 = new Person("Three", 300);
-        Person p4 = new Person("Four", 400);
-        Person p5 = new Person("Five", 500);
-        Person p6 = new Person("Six", 600);
-        return List.of(p1, p2, p3, p4, p5, p6);
-    }
 }
