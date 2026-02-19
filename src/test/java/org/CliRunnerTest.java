@@ -63,4 +63,32 @@ class CliRunnerTest {
 
     }
 
+    @Test
+    void findPersonShouldReturnPersonWithDifferentMethods() {
+        cRunner = new CliRunner();
+        cRunner.list.add(new Person("bob", 100));
+
+        var stringResult = cRunner.findPerson("bob");
+        var indexResult = cRunner.findPerson("0");
+
+        assertThat(stringResult).isNotEmpty();
+        assertThat(indexResult).isNotEmpty();
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "Bob, 1"
+    })
+    void removePersonShouldReduceListCountByOne(String name, String confirm) {
+        String simInput = String.format("%s\n%s", name, confirm);
+        Scanner fakeScanner = new Scanner(simInput);
+        cRunner = new CliRunner(fakeScanner);
+        cRunner.list.add(new Person("Bob", 100));
+        cRunner.list.add(new Person("Tim", 200));
+        cRunner.removePerson();
+        var result = cRunner.list.size();
+
+        assertThat(result).isOne();
+    }
+
 }

@@ -69,6 +69,8 @@ public class CliRunner {
         list.forEach(System.out::println);
     }
 
+
+    // TODO Normalize names
     protected void addPerson() {
         System.out.println("Name: ");
         String name = sc.nextLine().trim();
@@ -115,49 +117,36 @@ public class CliRunner {
         person.get().setMoneySpent(Double.parseDouble(money));
     }
 
-    private Optional<Person> findPerson(String name) {
-        if (name.matches("\\d")) {
-            if (list.size() < Integer.parseInt(name)) return Optional.empty();
+    protected Optional<Person> findPerson(String name) {
+        if (name.matches("\\d+")) {
+            if (list.size() <= Integer.parseInt(name)) return Optional.empty();
             return Optional.of(list.get(Integer.parseInt(name)));
         }
         return list.stream().filter(p ->
                 p.getName().matches(name)).findFirst();
     }
 
-    private boolean moneyValidation(String input) {
+    protected boolean moneyValidation(String input) {
         if (input.matches("\\d+")) {
             return true;
         }
         return false;
     }
 
-    private void removePerson() {
+    protected void removePerson() {
         System.out.println("Enter name or index of person to be removed");
         String input = sc.nextLine().trim();
-//        if (index >= list.size()) {
-//            System.out.println("index out of bounds!");
-//            return;
-//        }
-//        if (index < 0) {
-//            var person = findPerson(input);
-//            System.out.println("Remove person: " + person.get().getName() + " " + person.get().getMoneySpent());
-//            System.out.println("1) yes \nany) Exit");
-//            String answer = sc.nextLine().trim();
-//            if (answer.matches("1")) {
-//                list.remove(person);
-//                System.out.println("Removed person");
-//            }
-//        } else {
-//            var person = list.get(index);
-//            System.out.println("Remove person: " + person.getName() + " " + person.getMoneySpent());
-//            System.out.println("1) yes \nany) Exit");
-//            String answer = sc.nextLine().trim();
-//            if (answer.matches("1")) {
-//                list.remove(person);
-//                System.out.println("Removed person");
-//            }
-//        }
-
+        var person = findPerson(input);
+        if (person.isEmpty()) {
+            System.out.println("Person not found");
+            return;
+        }
+        System.out.println("Remove person: " + person.get().getName() + " " + person.get().getMoneySpent());
+        System.out.println("1) yes \nany) Exit");
+        if (sc.nextLine().matches("1")) {
+            list.remove(person.get());
+            System.out.println("Person removed!");
+        }
     }
 
     private void calculate() {
