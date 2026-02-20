@@ -117,4 +117,17 @@ class CliRunnerTest {
         assertThat(result).isOne();
     }
 
+    @Test
+    void calculateWithValidGroupShouldReturnHistorySize() {
+        cRunner = new CliRunner();
+        cRunner.addPersonToList("bob", 200);
+        cRunner.addPersonToList("tim", 400);
+
+        cRunner.calculate();
+
+        var result = cRunner.history.size();
+
+        assertThat(result).isOne();
+    }
+
 }
