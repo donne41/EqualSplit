@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="implented normalize name in find person method.">
+    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="implement more test and change to exception handling instead of systemPrint with validation.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/CliRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/CliRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/CliRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/CliRunnerTest.java" afterDir="false" />
@@ -67,7 +67,7 @@
     "JUnit.CliRunnerTest.editedPersonShouldSaveNewSpentMoney.executor": "Run",
     "JUnit.CliRunnerTest.editedPersonShouldSaveNewspentMoney (1).executor": "Run",
     "JUnit.CliRunnerTest.editedPersonShouldSaveNewspentMoney.executor": "Run",
-    "JUnit.CliRunnerTest.executor": "Coverage",
+    "JUnit.CliRunnerTest.executor": "Run",
     "JUnit.CliRunnerTest.findPersonShouldReturnPersonWithDifferentMethods.executor": "Run",
     "JUnit.CliRunnerTest.removePersonShouldReduceListCountByOne (1).executor": "Run",
     "JUnit.CliRunnerTest.removePersonShouldReduceListCountByOne.executor": "Run",
@@ -113,6 +113,19 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.CliRunnerTest">
+    <configuration name="CliRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.CliRunner" />
+      <module name="EqualSplit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CliRunnerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EqualSplit" />
       <extension name="coverage">
@@ -124,6 +137,22 @@
       <option name="PACKAGE_NAME" value="org" />
       <option name="MAIN_CLASS_NAME" value="org.CliRunnerTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CliRunnerTest.addThreePersonShouldReturnCorrectSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EqualSplit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org" />
+      <option name="MAIN_CLASS_NAME" value="org.CliRunnerTest" />
+      <option name="METHOD_NAME" value="addThreePersonShouldReturnCorrectSize" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,7 +173,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CliRunnerTest.editedPersonShouldSaveNewSpentMoney" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CliRunnerTest.removePersonShouldReduceListCountByOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EqualSplit" />
       <extension name="coverage">
         <pattern>
@@ -154,39 +183,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="org" />
       <option name="MAIN_CLASS_NAME" value="org.CliRunnerTest" />
-      <option name="METHOD_NAME" value="editedPersonShouldSaveNewSpentMoney" />
+      <option name="METHOD_NAME" value="removePersonShouldReduceListCountByOne" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CliRunnerTest.findPersonShouldReturnPersonWithDifferentMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="EqualSplit" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org" />
-      <option name="MAIN_CLASS_NAME" value="org.CliRunnerTest" />
-      <option name="METHOD_NAME" value="findPersonShouldReturnPersonWithDifferentMethods" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EqualSplitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="EqualSplit" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org" />
-      <option name="MAIN_CLASS_NAME" value="org.EqualSplitTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -194,10 +192,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CliRunnerTest" />
+        <item itemvalue="JUnit.CliRunnerTest.addThreePersonShouldReturnCorrectSize" />
+        <item itemvalue="Application.CliRunner" />
+        <item itemvalue="JUnit.CliRunnerTest.removePersonShouldReduceListCountByOne" />
         <item itemvalue="JUnit.CliRunnerTest.editPersonWrongInputValidation" />
-        <item itemvalue="JUnit.EqualSplitTest" />
-        <item itemvalue="JUnit.CliRunnerTest.editedPersonShouldSaveNewSpentMoney" />
-        <item itemvalue="JUnit.CliRunnerTest.findPersonShouldReturnPersonWithDifferentMethods" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +224,8 @@
       <workItem from="1771430063172" duration="5977000" />
       <workItem from="1771514073511" duration="1104000" />
       <workItem from="1771515181691" duration="8331000" />
-      <workItem from="1771577450724" duration="6476000" />
+      <workItem from="1771577450724" duration="6795000" />
+      <workItem from="1771604466399" duration="4179000" />
     </task>
     <task id="LOCAL−00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -354,7 +353,14 @@
       <option name="presentableId" value="LOCAL−00018" />
       <updated>1771581355441</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL−00019" summary="implement more test and change to exception handling instead of systemPrint with validation.">
+      <option name="closed" value="true" />
+      <created>1771591807977</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1771591807977</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +384,8 @@
     <MESSAGE value="remove person integration test" />
     <MESSAGE value="normalizing name before list input." />
     <MESSAGE value="implented normalize name in find person method." />
-    <option name="LAST_COMMIT_MESSAGE" value="implented normalize name in find person method." />
+    <MESSAGE value="implement more test and change to exception handling instead of systemPrint with validation." />
+    <option name="LAST_COMMIT_MESSAGE" value="implement more test and change to exception handling instead of systemPrint with validation." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -402,8 +409,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/CliRunnerTest.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="20" />
+          <line>77</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/CliRunnerTest.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/CliRunnerTest.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/CliRunner.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -413,7 +435,7 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/EqualSplit$CliRunnerTest.ic" NAME="CliRunnerTest Coverage Results" MODIFIED="1771581229264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/EqualSplit$CliRunnerTest.ic" NAME="CliRunnerTest Coverage Results" MODIFIED="1771591719768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>org.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/EqualSplit$EqualSplitTest.ic" NAME="EqualSplitTest Coverage Results" MODIFIED="1771581269160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

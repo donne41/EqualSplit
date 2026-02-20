@@ -2,12 +2,9 @@ package org;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.Scanner;
-import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -30,24 +27,16 @@ class CliRunnerTest {
         var result = cRunner.list.size();
 
         assertThat(result).isEqualTo(1);
-
     }
 
-    private static Stream<Arguments> personprovider() {
-        return Stream.of(
-                Arguments.of(
-                        String.join("\n", "1", "bob", "100", "1", "bob2", "200", "1", "bob3", "300", "\n"))
-        );
-    }
 
-    @ParameterizedTest
-    @MethodSource("personprovider")
-    void addThreePersonShouldReturnCorrectSize(String input) {
+    @Test
+    void addThreePersonShouldReturnCorrectSize() {
+        String input = "1\nbob\n100\n1\ntim\n200\n1\nrick\n300\n9";
         Scanner fakeScanner = new Scanner(input);
         cRunner = new CliRunner(fakeScanner);
 
         cRunner.main();
-        cRunner.exitProgram();
         var result = cRunner.list.size();
 
         assertThat(result).isEqualTo(3);
@@ -58,13 +47,13 @@ class CliRunnerTest {
             "3, bob, 1, 3, tim, anyKey, 9"
     })
     void removePersonShouldWithConfirmationShouldDecreaseSizeButNotAnyKey(int menuSelect, String name,
-                                                                         int confirm, int menuSelect2,
-                                                                         String name2, String anyKey, String exit) {
+                                                                          int confirm, int menuSelect2,
+                                                                          String name2, String anyKey, String exit) {
         String simInput = String.format("%d\n%s\n%d\n%d\n%s\n%s\n%s", menuSelect, name, confirm, menuSelect2, name2, anyKey, exit);
         Scanner fakeScanner = new Scanner(simInput);
         cRunner = new CliRunner(fakeScanner);
-        cRunner.addPersonToList("bob", "200");
-        cRunner.addPersonToList("tim", "300");
+        cRunner.addPersonToList("bob", 200);
+        cRunner.addPersonToList("tim", 300);
 
         cRunner.main();
 
@@ -76,8 +65,8 @@ class CliRunnerTest {
     @Test
     void editedPersonShouldSaveNewSpentMoney() {
         cRunner = new CliRunner();
-        cRunner.addPersonToList("bob", "100");
-        cRunner.editMoneySpent("bob", "300");
+        cRunner.addPersonToList("bob", 100);
+        cRunner.editMoneySpent("bob", 300);
 
         var result = cRunner.list.getLast().getMoneySpent();
         assertThat(result).isEqualTo(300);
@@ -86,8 +75,8 @@ class CliRunnerTest {
 
     @Test
     void editPersonWrongInputValidation() {
-        String blankInput = "   ";
-        String noMoneyInput = "iCri\nNomoney";
+        String blankInput = "2\n   ";
+        String noMoneyInput = "2\niCri\nNoMoney";
         Scanner fakeScan1 = new Scanner(blankInput);
         Scanner fakeScan2 = new Scanner(noMoneyInput);
         cRunner = new CliRunner(fakeScan1);
@@ -105,7 +94,7 @@ class CliRunnerTest {
     @Test
     void findPersonShouldReturnPersonWithDifferentMethods() {
         cRunner = new CliRunner();
-        cRunner.addPersonToList("bob", "200");
+        cRunner.addPersonToList("bob", 200);
 
         var stringResult = cRunner.findPerson("bob");
         var indexResult = cRunner.findPerson("0");
@@ -115,16 +104,13 @@ class CliRunnerTest {
         assertThat(indexResult).isNotEmpty();
     }
 
-    @ParameterizedTest
-    @CsvSource({
-            "Bob, 1"
-    })
-    void removePersonShouldReduceListCountByOne(String name, String confirm) {
-        String simInput = String.format("%s\n%s", name, confirm);
+    @Test
+    void removePersonShouldReduceListCountByOne() {
+        String simInput = "bob\n1";
         Scanner fakeScanner = new Scanner(simInput);
         cRunner = new CliRunner(fakeScanner);
-        cRunner.list.add(new Person("Bob", 100));
-        cRunner.list.add(new Person("Tim", 200));
+        cRunner.addPersonToList("bob", 100);
+        cRunner.addPersonToList("tim", 200);
         cRunner.removePerson();
         var result = cRunner.list.size();
 

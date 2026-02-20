@@ -37,23 +37,27 @@ public class CliRunner {
                 paid less than the share!
                 """);
         do {
-            System.out.printf("""
-                    1) Add person to group
-                    2) edit person
-                    3) remove person
-                    4) view group
-                    5) calculate
-                    9) exit
-                    """);
-            String input = sc.nextLine().trim();
-            int i = checkInput(input);
-            switch (i) {
-                case 1 -> addPerson();
-                case 2 -> editPerson();
-                case 3 -> removePerson();
-                case 4 -> viewList();
-                case 5 -> calculate();
-                default -> badInput = false;
+            try {
+                System.out.printf("""
+                        1) Add person to group
+                        2) edit person
+                        3) remove person
+                        4) view group
+                        5) calculate
+                        9) exit
+                        """);
+                String input = sc.nextLine().trim();
+                int i = checkInput(input);
+                switch (i) {
+                    case 1 -> addPerson();
+                    case 2 -> editPerson();
+                    case 3 -> removePerson();
+                    case 4 -> viewList();
+                    case 5 -> calculate();
+                    default -> badInput = false;
+                }
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
             }
 
         } while (badInput);
@@ -77,22 +81,24 @@ public class CliRunner {
 
     void addPerson() {
         String name;
-        String moneySpent;
+        double moneySpent = 0;
         do {
             System.out.println("Name: ");
             name = sc.nextLine().trim();
+            if (name.isBlank()) throw new IllegalArgumentException("Name cannot be blank");
             System.out.println("Money spent: ");
-            moneySpent = sc.nextLine().trim();
-            if (name.isBlank()) System.out.println("Bad name input!");
-            if (moneyValidation(moneySpent)) System.out.println("Bad money input");
+            if (sc.hasNextDouble()) {
+                moneySpent = sc.nextDouble();
+                sc.nextLine();
+            }
+            if (moneyValidation(moneySpent)) throw new IllegalArgumentException("Bad money input");
             break;
         } while (true);
         addPersonToList(name, moneySpent);
     }
 
-    void addPersonToList(String name, String moneySpent) {
+    void addPersonToList(String name, double money) {
         String normilizedName = getNormilizedName(name);
-        double money = Double.parseDouble(moneySpent);
         list.add(new Person(normilizedName, money));
     }
 
@@ -103,13 +109,16 @@ public class CliRunner {
 
     void editPerson() {
         String personInput;
-        String newMoney;
+        double newMoney = 0;
         do {
             System.out.println("Input name or index of person you want to edit");
             personInput = sc.nextLine().trim();
             if (personInput.isBlank()) throw new IllegalArgumentException("No name found or incorrect input");
             System.out.println("Input a corrected amount of money spent");
-            newMoney = sc.nextLine().trim();
+            if (sc.hasNextDouble()) {
+                newMoney = sc.nextDouble();
+                sc.nextLine();
+            }
             if (moneyValidation(newMoney)) throw new IllegalArgumentException("Incorrect money input");
             break;
         } while (true);
@@ -117,10 +126,10 @@ public class CliRunner {
 
     }
 
-    void editMoneySpent(String name, String money) {
+    void editMoneySpent(String name, double money) {
         var person = findPerson(getNormilizedName(name));
         System.out.println(person.get().getName() + " " + person.get().getMoneySpent() + " -> " + money);
-        person.get().setMoneySpent(Double.parseDouble(money));
+        person.get().setMoneySpent(money);
     }
 
     Optional<Person> findPerson(String name) {
@@ -132,8 +141,8 @@ public class CliRunner {
                 p.getName().matches(getNormilizedName(name))).findFirst();
     }
 
-    private boolean moneyValidation(String input) {
-        if (input.matches("\\d+")) {
+    private boolean moneyValidation(double input) {
+        if (input > 0) {
             return false;
         }
         return true;
@@ -155,7 +164,6 @@ public class CliRunner {
         }
     }
 
-    // TODO test
     void calculate() {
         history.add(equalSplit.getResult(list));
         resultPrinter();
