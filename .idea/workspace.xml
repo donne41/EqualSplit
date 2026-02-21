@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="update to java 25+">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/MenuSelect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="better money handling with commas, removed unneccesary loops, switch to enmun for selection.">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/CliRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/CliRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +244,7 @@
       <workItem from="1771670065518" duration="1976000" />
       <workItem from="1771672298822" duration="1198000" />
       <workItem from="1771673535612" duration="4369000" />
-      <workItem from="1771681459685" duration="3689000" />
+      <workItem from="1771681459685" duration="4612000" />
     </task>
     <task id="LOCAL−00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -408,7 +407,14 @@
       <option name="presentableId" value="LOCAL−00023" />
       <updated>1771679051598</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL−00024" summary="better money handling with commas, removed unneccesary loops, switch to enmun for selection.">
+      <option name="closed" value="true" />
+      <created>1771685864837</created>
+      <option name="number" value="LOCAL−00024" />
+      <option name="presentableId" value="LOCAL−00024" />
+      <updated>1771685864837</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,7 +454,8 @@
     <MESSAGE value="unable to run package, test with downgrade to java 21" />
     <MESSAGE value="Small changes to not crash the program with invalid input." />
     <MESSAGE value="update to java 25" />
-    <option name="LAST_COMMIT_MESSAGE" value="update to java 25" />
+    <MESSAGE value="better money handling with commas, removed unneccesary loops, switch to enmun for selection." />
+    <option name="LAST_COMMIT_MESSAGE" value="better money handling with commas, removed unneccesary loops, switch to enmun for selection." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -477,21 +484,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/CliRunner.java</url>
-          <line>73</line>
+          <line>76</line>
           <properties class="org.CliRunner" method="addPerson">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/org/CliRunner.java</url>
-          <line>130</line>
-          <properties class="org.CliRunner" method="getSafeDouble">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

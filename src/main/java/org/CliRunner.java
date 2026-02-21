@@ -25,9 +25,7 @@ public class CliRunner {
         sc = new Scanner(System.in);
     }
 
-
-    public void run() {
-        badInput = true;
+    public void welcome() {
         System.out.printf("""
                 Welcome to EqualSplit!
                 
@@ -36,6 +34,12 @@ public class CliRunner {
                 I'll figure out exactly who owes whom—minimizing the number of transactions to make settling up as easy as possible.
                 
                 """);
+        run();
+    }
+
+
+    public void run() {
+        badInput = true;
         do {
             try {
                 System.out.printf("""
@@ -57,7 +61,7 @@ public class CliRunner {
                     case EXIT -> badInput = false;
                 }
             } catch (IllegalArgumentException e) {
-                System.out.println("Error: " + e.getMessage());
+                System.out.println("Error: " + e.getMessage() + "\n");
                 run();
             }
 
