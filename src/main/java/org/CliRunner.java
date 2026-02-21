@@ -29,7 +29,7 @@ public class CliRunner {
         badInput = false;
     }
 
-    void main() {
+    public void run() {
         badInput = true;
         System.out.printf("""
                 Welcome to EqualSplit, Here you can easily calculate a share everybody is support to share
@@ -61,7 +61,6 @@ public class CliRunner {
             }
 
         } while (badInput);
-
     }
 
     private int checkInput(String input) {

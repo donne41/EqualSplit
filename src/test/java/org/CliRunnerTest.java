@@ -23,7 +23,7 @@ class CliRunnerTest {
         Scanner fakeScanner = new Scanner(simInput);
         cRunner = new CliRunner(fakeScanner);
 
-        cRunner.main();
+        cRunner.run();
         var result = cRunner.list.size();
 
         assertThat(result).isEqualTo(1);
@@ -36,7 +36,7 @@ class CliRunnerTest {
         Scanner fakeScanner = new Scanner(input);
         cRunner = new CliRunner(fakeScanner);
 
-        cRunner.main();
+        cRunner.run();
         var result = cRunner.list.size();
 
         assertThat(result).isEqualTo(3);
@@ -55,7 +55,7 @@ class CliRunnerTest {
         cRunner.addPersonToList("bob", 200);
         cRunner.addPersonToList("tim", 300);
 
-        cRunner.main();
+        cRunner.run();
 
         var result = cRunner.list.size();
 
