@@ -42,11 +42,11 @@ jobs:
         run: |
           jpackage --input target/ \
           --name EqualsplitApp \
-          --app-version "${{ steps.get_version.outputs.VERSION }}" \
-          --main-jar EqualSplit-"${{ steps.get_version.outputs.VERSION }}".jar \  
+          --app-version ${{ steps.get_version.outputs.VERSION }} \
+          --main-jar EqualSplit-${{ steps.get_version.outputs.VERSION }}.jar \
           --main-class org.Main \
-          --type app-image \
-          $( [ "${{matrix.os }}" == "windows-latest" ] && echo "--win-console" )
+          $( [ "${{matrix.os }}" == "windows-latest" ] && echo "--win-console" ) \
+          --type app-image
 
       - name: Archive Linux build
         if: matrix.os == 'ubuntu-latest'
