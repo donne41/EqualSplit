@@ -42,7 +42,7 @@ public class Person {
     @Override
     public String toString() {
         return "Person" +
-                " name=" + name + '\'' +
-                ", moneySpent=" + moneySpent;
+                " Name=" + name +
+                ", Money spent=" + moneySpent;
     }
 }
