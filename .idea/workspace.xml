@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="fix workflow">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="fix workflow permissions">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +244,7 @@
       <workItem from="1771672298822" duration="1198000" />
       <workItem from="1771673535612" duration="4369000" />
       <workItem from="1771681459685" duration="6099000" />
-      <workItem from="1771829857987" duration="4431000" />
+      <workItem from="1771829857987" duration="4851000" />
     </task>
     <task id="LOCAL−00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -449,7 +449,14 @@
       <option name="presentableId" value="LOCAL−00029" />
       <updated>1771833836299</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL−00030" summary="fix workflow permissions">
+      <option name="closed" value="true" />
+      <created>1771834524733</created>
+      <option name="number" value="LOCAL−00030" />
+      <option name="presentableId" value="LOCAL−00030" />
+      <updated>1771834524733</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,7 +474,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add getSum and average with tests&#10;implement person class" />
     <MESSAGE value="get transaction list for money sent, and using resultSplit to present result nicely soon" />
     <MESSAGE value="result printer" />
     <MESSAGE value="add person test" />
@@ -492,7 +498,8 @@
     <MESSAGE value="fix for main jar not implemeting the dynamic version naming" />
     <MESSAGE value="fix&#10;backslashes to make the bash command act as one command." />
     <MESSAGE value="fix workflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix workflow" />
+    <MESSAGE value="fix workflow permissions" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix workflow permissions" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
