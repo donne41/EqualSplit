@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="moved welcome text">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="release yaml for both windows and Linux fat package." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -245,7 +242,7 @@
       <workItem from="1771672298822" duration="1198000" />
       <workItem from="1771673535612" duration="4369000" />
       <workItem from="1771681459685" duration="6099000" />
-      <workItem from="1771829857987" duration="1451000" />
+      <workItem from="1771829857987" duration="1967000" />
     </task>
     <task id="LOCAL−00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -422,7 +419,14 @@
       <option name="presentableId" value="LOCAL−00025" />
       <updated>1771686782490</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL−00026" summary="release yaml for both windows and Linux fat package.">
+      <option name="closed" value="true" />
+      <created>1771831548779</created>
+      <option name="number" value="LOCAL−00026" />
+      <option name="presentableId" value="LOCAL−00026" />
+      <updated>1771831548779</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +468,8 @@
     <MESSAGE value="update to java 25" />
     <MESSAGE value="better money handling with commas, removed unneccesary loops, switch to enmun for selection." />
     <MESSAGE value="moved welcome text" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved welcome text" />
+    <MESSAGE value="release yaml for both windows and Linux fat package." />
+    <option name="LAST_COMMIT_MESSAGE" value="release yaml for both windows and Linux fat package." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
