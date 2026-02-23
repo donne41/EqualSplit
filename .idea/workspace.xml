@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="fix workflow permissions">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/CliRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/CliRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +246,7 @@
       <workItem from="1771672298822" duration="1198000" />
       <workItem from="1771673535612" duration="4369000" />
       <workItem from="1771681459685" duration="6099000" />
-      <workItem from="1771829857987" duration="4851000" />
+      <workItem from="1771829857987" duration="9216000" />
     </task>
     <task id="LOCAL−00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -456,7 +458,14 @@
       <option name="presentableId" value="LOCAL−00030" />
       <updated>1771834524733</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL−00031" summary="fix workflow permissions">
+      <option name="closed" value="true" />
+      <created>1771835072813</created>
+      <option name="number" value="LOCAL−00031" />
+      <option name="presentableId" value="LOCAL−00031" />
+      <updated>1771835072813</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,15 +534,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/org/CliRunnerTest.java</url>
           <line>34</line>
           <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/org/CliRunner.java</url>
-          <line>77</line>
-          <properties class="org.CliRunner" method="addPerson">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

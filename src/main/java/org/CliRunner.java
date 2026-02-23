@@ -44,11 +44,11 @@ public class CliRunner {
             try {
                 System.out.printf("""
                         1) Add person to group
-                        2) edit person
-                        3) remove person
-                        4) view group
-                        5) calculate
-                        9) exit
+                        2) Edit person
+                        3) Remove person
+                        4) View group
+                        5) Calculate
+                        any) Exit
                         """);
                 String input = sc.nextLine().trim();
                 MenuSelect select = MenuSelect.fromString(input);
@@ -169,7 +169,7 @@ public class CliRunner {
                     Sender: %-10s -> Reciver: %-10s Amount: %.2f\n""", t.getSenderName(), t.getReciverName(), t.getMoney());
         }
         System.out.printf("""
-                Total spent: %.2f Share amount: %.2f\n""", result.sum, result.portion);
+                Total Expenses: %.2f | Individual Share: %.2f\n""", result.sum, result.portion);
     }
 
 }
