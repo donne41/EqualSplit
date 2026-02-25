@@ -4,23 +4,11 @@ on:
     types:
       - created
 jobs:
-  build:
-    name: Build on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
+  publish:
+    runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
       packages: write
-    strategy:
-      matrix:
-        os: [ ubuntu-latest, windows-latest ]
-        include:
-          - os: ubuntu-latest
-            artifact_name: Equalsplit-Linux.tar.gz
-            output_dir: EqualsplitApp
-          - os: windows-latest
-            artifact_name: Equalsplit-Windows.zip
-            output_dir: EqualsplitApp
-
     steps:
       - uses: actions/checkout@v6.0.2
       - name: Set up JDK
@@ -29,40 +17,11 @@ jobs:
           java-version: '25'
           distribution: 'temurin'
           cache: 'maven'
-
       - name: Set project version from tag
-        id: get_version
-        shell: bash
         run: |
           CLEAN_VERSION=${GITHUB_REF_NAME#v}
-          echo "VERSION=$CLEAN_VERSION" >> $GITHUB_OUTPUT
           mvn versions:set -DnewVersion=${CLEAN_VERSION} -DgenerateBackupPoms=false
-      - name: Build with Maven
-        run: mvn -B clean package
-
-      - name: Run jpackage
-        shell: bash
-        run: |
-          jpackage --input target/ \
-          --name EqualsplitApp \
-          --app-version ${{ steps.get_version.outputs.VERSION }} \
-          --main-jar EqualSplit-${{ steps.get_version.outputs.VERSION }}.jar \
-          --main-class org.Main \
-          $( [ "${{matrix.os }}" == "windows-latest" ] && echo "--win-console" ) \
-          --type app-image
-
-      - name: Archive Linux build
-        if: matrix.os == 'ubuntu-latest'
-        run: tar -czf Equalsplit-Linux.tar.gz EqualsplitApp/
-
-      - name: Archive Windows build
-        if: matrix.os == 'windows-latest'
-        shell: pwsh
-        run: Compress-Archive -Path "EqualsplitApp" -DestinationPath "Equalsplit-Windows.zip"
-
-      - name: Upload to Release
-        uses: softprops/action-gh-release@v2.5.0
-        with:
-          files: ${{ matrix.artifact_name }}
+      - name: Publish with Maven
+        run: mvn -B deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

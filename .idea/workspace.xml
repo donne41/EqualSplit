@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="fix workflow permissions">
+    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="removed som param for pitest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/CliRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/CliRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,14 +19,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="GitHub Workflow" />
-        <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -36,12 +40,12 @@
     &quot;assignee&quot;: &quot;donne41&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/donne41/EqualSplit.git&quot;,
-    &quot;accountId&quot;: &quot;50e3b4ff-64fa-4cb2-9bca-2412c708135c&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/donne41/EqualSplit.git",
+    "accountId": "f811828c-24e5-4603-ab5c-d2690f88a5ef"
   }
-}</component>
+}]]></component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupGrunt">
       <scroll-view-position x="0" y="0" />
@@ -59,68 +63,70 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CliRunner.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CliRunnerTest.addPersonShouldIncreaseGroupSize (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CliRunnerTest.addPersonShouldIncreaseGroupSize.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.CliRunnerTest.addThreePersonShoulRetunCorrectSize (1).executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.CliRunnerTest.addThreePersonShoulRetunCorrectSize.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CliRunnerTest.addThreePersonShouldRetunCorrectSize.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.CliRunnerTest.addThreePersonShouldReturnCorrectSize (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CliRunnerTest.addThreePersonShouldReturnCorrectSize.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.CliRunnerTest.calculateWithValidGroupShouldReturnHistorySize.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CliRunnerTest.editPersonWrongInputValidation.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CliRunnerTest.editedPersonShouldSaveNewSpentMoney.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CliRunnerTest.editedPersonShouldSaveNewspentMoney (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CliRunnerTest.editedPersonShouldSaveNewspentMoney.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CliRunnerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CliRunnerTest.findPersonShouldReturnPersonWithDifferentMethods.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CliRunnerTest.removePersonShouldReduceListCountByOne (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CliRunnerTest.removePersonShouldReduceListCountByOne.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CliRunnerTest.removePersonShouldWithConfirmationShouldDecreaseSizeButNotAnyKey.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CliRunnerTest.removePersonShouldWithConfirmationShouldDecreseSizeButNotAnyKey (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CliRunnerTest.removePersonShouldWithConfirmationShouldDecreseSizeButNotAnyKey.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.EqualSplitTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.EqualSplitTest.getAmountOfsentMoney.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.EqualSplitTest.getPersonOwned.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.EqualSplitTest.getPortionSize.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.EqualSplitTest.getSum.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.EqualSplit [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.EqualSplit [deploy].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.EqualSplit [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.EqualSplit [org.pitest:pitest-maven:1.22.0:mutationCoverage].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.EqualSplit [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.EqualSplit [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.EqualSplit [validate].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;profiler.jvm&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CliRunner.executor": "Run",
+    "Application.Main.executor": "Run",
+    "JUnit.CliRunnerTest.addPersonShouldIncreaseGroupSize (1).executor": "Run",
+    "JUnit.CliRunnerTest.addPersonShouldIncreaseGroupSize.executor": "Debug",
+    "JUnit.CliRunnerTest.addThreePersonShoulRetunCorrectSize (1).executor": "Debug",
+    "JUnit.CliRunnerTest.addThreePersonShoulRetunCorrectSize.executor": "Run",
+    "JUnit.CliRunnerTest.addThreePersonShouldRetunCorrectSize.executor": "Debug",
+    "JUnit.CliRunnerTest.addThreePersonShouldReturnCorrectSize (1).executor": "Run",
+    "JUnit.CliRunnerTest.addThreePersonShouldReturnCorrectSize.executor": "Debug",
+    "JUnit.CliRunnerTest.calculateWithValidGroupShouldReturnHistorySize.executor": "Run",
+    "JUnit.CliRunnerTest.editPersonWrongInputValidation.executor": "Run",
+    "JUnit.CliRunnerTest.editedPersonShouldSaveNewSpentMoney.executor": "Run",
+    "JUnit.CliRunnerTest.editedPersonShouldSaveNewspentMoney (1).executor": "Run",
+    "JUnit.CliRunnerTest.editedPersonShouldSaveNewspentMoney.executor": "Run",
+    "JUnit.CliRunnerTest.executor": "Run",
+    "JUnit.CliRunnerTest.findPersonShouldReturnPersonWithDifferentMethods.executor": "Run",
+    "JUnit.CliRunnerTest.removePersonShouldReduceListCountByOne (1).executor": "Run",
+    "JUnit.CliRunnerTest.removePersonShouldReduceListCountByOne.executor": "Run",
+    "JUnit.CliRunnerTest.removePersonShouldWithConfirmationShouldDecreaseSizeButNotAnyKey.executor": "Run",
+    "JUnit.CliRunnerTest.removePersonShouldWithConfirmationShouldDecreseSizeButNotAnyKey (1).executor": "Run",
+    "JUnit.CliRunnerTest.removePersonShouldWithConfirmationShouldDecreseSizeButNotAnyKey.executor": "Run",
+    "JUnit.EqualSplitServiceTest.invalidInputShouldThrowException.executor": "Run",
+    "JUnit.EqualSplitTest.executor": "Run",
+    "JUnit.EqualSplitTest.getAmountOfsentMoney.executor": "Run",
+    "JUnit.EqualSplitTest.getPersonOwned.executor": "Run",
+    "JUnit.EqualSplitTest.getPortionSize.executor": "Run",
+    "JUnit.EqualSplitTest.getSum.executor": "Run",
+    "Maven.EqualSplit [clean].executor": "Run",
+    "Maven.EqualSplit [compile].executor": "Run",
+    "Maven.EqualSplit [deploy].executor": "Run",
+    "Maven.EqualSplit [install].executor": "Run",
+    "Maven.EqualSplit [org.pitest:pitest-maven:1.22.0:mutationCoverage].executor": "Run",
+    "Maven.EqualSplit [package].executor": "Run",
+    "Maven.EqualSplit [test].executor": "Run",
+    "Maven.EqualSplit [validate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "#1 on refactoring/package",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "profiler.jvm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -129,20 +135,7 @@
       <recent name="org" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="CliRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.CliRunner" />
-      <module name="EqualSplit" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.EqualSplitServiceTest.invalidInputShouldThrowException">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.Main" />
       <module name="EqualSplit" />
@@ -187,6 +180,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EqualSplitServiceTest.invalidInputShouldThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EqualSplit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org" />
+      <option name="MAIN_CLASS_NAME" value="org.EqualSplitServiceTest" />
+      <option name="METHOD_NAME" value="invalidInputShouldThrowException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EqualSplitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EqualSplit" />
       <extension name="coverage">
@@ -204,11 +213,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.EqualSplitTest" />
-        <item itemvalue="JUnit.CliRunnerTest" />
-        <item itemvalue="Application.CliRunner" />
+        <item itemvalue="JUnit.EqualSplitServiceTest.invalidInputShouldThrowException" />
         <item itemvalue="JUnit.CliRunnerTest.calculateWithValidGroupShouldReturnHistorySize" />
+        <item itemvalue="JUnit.CliRunnerTest" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -245,8 +254,8 @@
       <workItem from="1771670065518" duration="1976000" />
       <workItem from="1771672298822" duration="1198000" />
       <workItem from="1771673535612" duration="4369000" />
-      <workItem from="1771681459685" duration="6099000" />
-      <workItem from="1771829857987" duration="9216000" />
+      <workItem from="1771681459685" duration="4612000" />
+      <workItem from="1772021814564" duration="4964000" />
     </task>
     <task id="LOCAL−00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -416,56 +425,28 @@
       <option name="presentableId" value="LOCAL−00024" />
       <updated>1771685864837</updated>
     </task>
-    <task id="LOCAL−00025" summary="moved welcome text">
+    <task id="LOCAL−00025" summary="Made a service class for easy access and list handling.">
       <option name="closed" value="true" />
-      <created>1771686782490</created>
+      <created>1772024711190</created>
       <option name="number" value="LOCAL−00025" />
       <option name="presentableId" value="LOCAL−00025" />
-      <updated>1771686782490</updated>
+      <updated>1772024711190</updated>
     </task>
-    <task id="LOCAL−00026" summary="release yaml for both windows and Linux fat package.">
+    <task id="LOCAL−00026" summary="add a beguinning of tests">
       <option name="closed" value="true" />
-      <created>1771831548779</created>
+      <created>1772026311833</created>
       <option name="number" value="LOCAL−00026" />
       <option name="presentableId" value="LOCAL−00026" />
-      <updated>1771831548779</updated>
+      <updated>1772026311833</updated>
     </task>
-    <task id="LOCAL−00027" summary="fix for main jar not implemeting the dynamic version naming">
+    <task id="LOCAL−00027" summary="removed som param for pitest">
       <option name="closed" value="true" />
-      <created>1771832097288</created>
+      <created>1772027488353</created>
       <option name="number" value="LOCAL−00027" />
       <option name="presentableId" value="LOCAL−00027" />
-      <updated>1771832097288</updated>
+      <updated>1772027488353</updated>
     </task>
-    <task id="LOCAL−00028" summary="fix&#10;backslashes to make the bash command act as one command.">
-      <option name="closed" value="true" />
-      <created>1771832873761</created>
-      <option name="number" value="LOCAL−00028" />
-      <option name="presentableId" value="LOCAL−00028" />
-      <updated>1771832873761</updated>
-    </task>
-    <task id="LOCAL−00029" summary="fix workflow">
-      <option name="closed" value="true" />
-      <created>1771833836299</created>
-      <option name="number" value="LOCAL−00029" />
-      <option name="presentableId" value="LOCAL−00029" />
-      <updated>1771833836299</updated>
-    </task>
-    <task id="LOCAL−00030" summary="fix workflow permissions">
-      <option name="closed" value="true" />
-      <created>1771834524733</created>
-      <option name="number" value="LOCAL−00030" />
-      <option name="presentableId" value="LOCAL−00030" />
-      <updated>1771834524733</updated>
-    </task>
-    <task id="LOCAL−00031" summary="fix workflow permissions">
-      <option name="closed" value="true" />
-      <created>1771835072813</created>
-      <option name="number" value="LOCAL−00031" />
-      <option name="presentableId" value="LOCAL−00031" />
-      <updated>1771835072813</updated>
-    </task>
-    <option name="localTasksCounter" value="32" />
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,6 +464,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="release workflow" />
+    <MESSAGE value="add mockito dependency" />
+    <MESSAGE value="add getSum and average with tests&#10;implement person class" />
     <MESSAGE value="get transaction list for money sent, and using resultSplit to present result nicely soon" />
     <MESSAGE value="result printer" />
     <MESSAGE value="add person test" />
@@ -502,13 +486,10 @@
     <MESSAGE value="Small changes to not crash the program with invalid input." />
     <MESSAGE value="update to java 25" />
     <MESSAGE value="better money handling with commas, removed unneccesary loops, switch to enmun for selection." />
-    <MESSAGE value="moved welcome text" />
-    <MESSAGE value="release yaml for both windows and Linux fat package." />
-    <MESSAGE value="fix for main jar not implemeting the dynamic version naming" />
-    <MESSAGE value="fix&#10;backslashes to make the bash command act as one command." />
-    <MESSAGE value="fix workflow" />
-    <MESSAGE value="fix workflow permissions" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix workflow permissions" />
+    <MESSAGE value="Made a service class for easy access and list handling." />
+    <MESSAGE value="add a beguinning of tests" />
+    <MESSAGE value="removed som param for pitest" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed som param for pitest" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -529,11 +510,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/EqualSplit.java</url>
           <line>41</line>
           <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/CliRunnerTest.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
