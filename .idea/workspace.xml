@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="correction url">
+    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="update ppom group">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -461,7 +460,14 @@
       <option name="presentableId" value="LOCAL−00029" />
       <updated>1772031647748</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL−00030" summary="update ppom group">
+      <option name="closed" value="true" />
+      <created>1772036124466</created>
+      <option name="number" value="LOCAL−00030" />
+      <option name="presentableId" value="LOCAL−00030" />
+      <updated>1772036124466</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,7 +485,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add getSum and average with tests&#10;implement person class" />
     <MESSAGE value="get transaction list for money sent, and using resultSplit to present result nicely soon" />
     <MESSAGE value="result printer" />
     <MESSAGE value="add person test" />
@@ -504,7 +509,8 @@
     <MESSAGE value="removed som param for pitest" />
     <MESSAGE value="release for package handling" />
     <MESSAGE value="correction url" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction url" />
+    <MESSAGE value="update ppom group" />
+    <option name="LAST_COMMIT_MESSAGE" value="update ppom group" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
