@@ -12,14 +12,15 @@ public class EqualSplitService {
     public void addPerson(String name, double moneySpent) {
         if (inputValidation(name, moneySpent))
             throw new RuntimeException("Invalid input when adding person");
-
-        group.add(new Person(name, moneySpent));
+        String normalName = normalizeName(name);
+        group.add(new Person(normalName, moneySpent));
     }
 
     public void editPerson(String nameSearch, double newMoney) {
         if (inputValidation(nameSearch, newMoney))
             throw new RuntimeException("Invalid name or money");
-        Optional<Person> person = findPerson(nameSearch);
+        String normalName = normalizeName(nameSearch);
+        Optional<Person> person = findPerson(normalName);
         if (person.isPresent()) {
             person.get().setMoneySpent(newMoney);
         }
@@ -28,7 +29,8 @@ public class EqualSplitService {
     public void removePerson(String name) {
         if (inputValidation(name))
             throw new RuntimeException("invalid name");
-        Optional<Person> person = findPerson(name);
+        String normalName = normalizeName(name);
+        Optional<Person> person = findPerson(normalName);
         if (person.isPresent())
             group.remove(person);
     }
@@ -53,6 +55,10 @@ public class EqualSplitService {
         if (money < 0)
             return true;
         return false;
+    }
+
+    private String normalizeName(String rawName) {
+        return rawName.trim().substring(0, 1).toUpperCase() + rawName.trim().substring(1).toLowerCase();
     }
 
     private boolean inputValidation(String name) {
