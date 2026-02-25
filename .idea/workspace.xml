@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="Made a service class for easy access and list handling.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/EqualSplitServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/EqualSplitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/EqualSplitService.java" afterDir="false" />
+    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="update pom group">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +32,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -43,7 +42,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/donne41/EqualSplitCli.git",
+    "url": "https://github.com/donne41/EqualSplit.git",
     "accountId": "f811828c-24e5-4603-ab5c-d2690f88a5ef"
   }
 }]]></component>
@@ -111,7 +110,7 @@
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "refactoring/package",
+    "git-widget-placeholder": "#1 on main",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
@@ -214,8 +213,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EqualSplitServiceTest.invalidInputShouldThrowException" />
         <item itemvalue="JUnit.EqualSplitTest" />
+        <item itemvalue="JUnit.EqualSplitServiceTest.invalidInputShouldThrowException" />
         <item itemvalue="JUnit.CliRunnerTest.calculateWithValidGroupShouldReturnHistorySize" />
         <item itemvalue="JUnit.CliRunnerTest" />
         <item itemvalue="Application.Main" />
@@ -256,7 +255,7 @@
       <workItem from="1771672298822" duration="1198000" />
       <workItem from="1771673535612" duration="4369000" />
       <workItem from="1771681459685" duration="4612000" />
-      <workItem from="1772021814564" duration="4358000" />
+      <workItem from="1772021814564" duration="4964000" />
     </task>
     <task id="LOCAL−00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -433,7 +432,49 @@
       <option name="presentableId" value="LOCAL−00025" />
       <updated>1772024711190</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL−00026" summary="add a beguinning of tests">
+      <option name="closed" value="true" />
+      <created>1772026311833</created>
+      <option name="number" value="LOCAL−00026" />
+      <option name="presentableId" value="LOCAL−00026" />
+      <updated>1772026311833</updated>
+    </task>
+    <task id="LOCAL−00027" summary="removed som param for pitest">
+      <option name="closed" value="true" />
+      <created>1772027488353</created>
+      <option name="number" value="LOCAL−00027" />
+      <option name="presentableId" value="LOCAL−00027" />
+      <updated>1772027488353</updated>
+    </task>
+    <task id="LOCAL−00028" summary="release for package handling">
+      <option name="closed" value="true" />
+      <created>1772029750044</created>
+      <option name="number" value="LOCAL−00028" />
+      <option name="presentableId" value="LOCAL−00028" />
+      <updated>1772029750044</updated>
+    </task>
+    <task id="LOCAL−00029" summary="correction url">
+      <option name="closed" value="true" />
+      <created>1772031647748</created>
+      <option name="number" value="LOCAL−00029" />
+      <option name="presentableId" value="LOCAL−00029" />
+      <updated>1772031647748</updated>
+    </task>
+    <task id="LOCAL−00030" summary="update ppom group">
+      <option name="closed" value="true" />
+      <created>1772036124466</created>
+      <option name="number" value="LOCAL−00030" />
+      <option name="presentableId" value="LOCAL−00030" />
+      <updated>1772036124466</updated>
+    </task>
+    <task id="LOCAL−00031" summary="update pom group">
+      <option name="closed" value="true" />
+      <created>1772040928398</created>
+      <option name="number" value="LOCAL−00031" />
+      <option name="presentableId" value="LOCAL−00031" />
+      <updated>1772040928398</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,11 +492,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial commit" />
-    <MESSAGE value="release workflow" />
-    <MESSAGE value="add mockito dependency" />
-    <MESSAGE value="add getSum and average with tests&#10;implement person class" />
-    <MESSAGE value="get transaction list for money sent, and using resultSplit to present result nicely soon" />
     <MESSAGE value="result printer" />
     <MESSAGE value="add person test" />
     <MESSAGE value="multiple person test with method source." />
@@ -475,7 +511,13 @@
     <MESSAGE value="update to java 25" />
     <MESSAGE value="better money handling with commas, removed unneccesary loops, switch to enmun for selection." />
     <MESSAGE value="Made a service class for easy access and list handling." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made a service class for easy access and list handling." />
+    <MESSAGE value="add a beguinning of tests" />
+    <MESSAGE value="removed som param for pitest" />
+    <MESSAGE value="release for package handling" />
+    <MESSAGE value="correction url" />
+    <MESSAGE value="update ppom group" />
+    <MESSAGE value="update pom group" />
+    <option name="LAST_COMMIT_MESSAGE" value="update pom group" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
