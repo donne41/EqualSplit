@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="update pom group">
+    <list default="true" id="f93d429e-7056-40a0-bced-7948c3772247" name="Changes" comment="read me with public download jitpack.io">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/EqualSplitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/EqualSplitService.java" afterDir="false" />
     </list>
@@ -259,7 +259,7 @@
       <workItem from="1772021814564" duration="4964000" />
       <workItem from="1772182675038" duration="4000" />
       <workItem from="1772184568287" duration="4000" />
-      <workItem from="1772184579044" duration="2127000" />
+      <workItem from="1772184579044" duration="4785000" />
     </task>
     <task id="LOCAL−00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -478,7 +478,28 @@
       <option name="presentableId" value="LOCAL−00031" />
       <updated>1772040928398</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL−00032" summary="fix method for return value for confirmation">
+      <option name="closed" value="true" />
+      <created>1772186870680</created>
+      <option name="number" value="LOCAL−00032" />
+      <option name="presentableId" value="LOCAL−00032" />
+      <updated>1772186870680</updated>
+    </task>
+    <task id="LOCAL−00033" summary="release file got mixed up">
+      <option name="closed" value="true" />
+      <created>1772186989740</created>
+      <option name="number" value="LOCAL−00033" />
+      <option name="presentableId" value="LOCAL−00033" />
+      <updated>1772186989740</updated>
+    </task>
+    <task id="LOCAL−00034" summary="read me with public download jitpack.io">
+      <option name="closed" value="true" />
+      <created>1772188184040</created>
+      <option name="number" value="LOCAL−00034" />
+      <option name="presentableId" value="LOCAL−00034" />
+      <updated>1772188184040</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,9 +517,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="result printer" />
-    <MESSAGE value="add person test" />
-    <MESSAGE value="multiple person test with method source." />
     <MESSAGE value="edit person simple method" />
     <MESSAGE value="remove person simple method" />
     <MESSAGE value="small refactoring editperson and remove person" />
@@ -521,7 +539,10 @@
     <MESSAGE value="correction url" />
     <MESSAGE value="update ppom group" />
     <MESSAGE value="update pom group" />
-    <option name="LAST_COMMIT_MESSAGE" value="update pom group" />
+    <MESSAGE value="fix method for return value for confirmation" />
+    <MESSAGE value="release file got mixed up" />
+    <MESSAGE value="read me with public download jitpack.io" />
+    <option name="LAST_COMMIT_MESSAGE" value="read me with public download jitpack.io" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

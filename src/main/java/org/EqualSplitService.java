@@ -59,11 +59,11 @@ public class EqualSplitService {
     }
 
     public List<SplitResult> getResultList() {
-        return history;
+        return List.copyOf(history);
     }
 
     public List<Person> getGroup() {
-        return group;
+        return List.copyOf(group);
     }
 
     public Optional<Person> findPerson(String name) {
