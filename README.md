@@ -14,34 +14,26 @@ How will we split this equally? I could just calculate it, but then again,
  
 ## Instructions
 
- - No installation required
- - Windows: Dowload the .zip, extract and launch EqualSplitApp.exe
- - Linux: Download the .tar.gz, extract and run ./bin/EqualSplitApp.
+This is the backend part of the program, it include only the barebone.
 
-Add as many people you need with their expenses, this cannot be negative as they have either spent money or they havent.
-When everyone is accounted for to share the expenses, press calculate to get the list of who sends money to whom and how much. 
-This is calculated to get the least amount of transactions between people. 
+To use this you need to add this in your pom.xml
 
 ```
-Inputs
-  1) Add person to group // Name and expeses for that person. 
-  2) Edit person         // Change the amount the person has spent
-  3) Remove person       // Remove person based on name or index in the list.
-  4) View group          // Prints all members of the group with their expenditure.
-  5) Calculate           // Prints the transactions to even out expenses as sender, reciver, and amount.
+        <dependency>
+            <groupId>com.github.donne41</groupId>
+            <artifactId>equalsplit</artifactId>
+            <version>${LATEST-VERSION}</version>
+        </dependency>
 ```
 
-Example 
-  ```
-list of people
-  Person name=Bob, moneySpent=500.5
-  Person name=Timmy, moneySpent=843.9
-  Person name=Randy, moneySpent=219.7
-  Person name=Steve, moneySpent=761.7
+And because this is not from maven central and only a hobby project.
+You also need to tell maven where to look elsewhere for packages.
 
-Result
-  Sender: Randy      -> Reciver: Timmy      Amount: 262,45
-  Sender: Randy      -> Reciver: Steve      Amount: 99,30
-  Sender: Bob        -> Reciver: Steve      Amount: 80,95
-  Total Expenses: 2325,80 | Individual Share: 581,45
+```
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://www.jitpack.io</url>
+        </repository>
+    </repositories>
 ```
