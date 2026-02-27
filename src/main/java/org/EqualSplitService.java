@@ -84,7 +84,8 @@ public class EqualSplitService {
     }
 
     /**
-     * <p>Streams through the list of people and matches by name</p>
+     * Streams through the list of people and matches by name
+     * <p>
      * also se {@link #findPerson(int)} to find person by index
      * @param name of person
      * @return Optional Person or Optional Empty
@@ -96,11 +97,12 @@ public class EqualSplitService {
     }
 
     /**
-     * <p>Returns person of index in the group list</p>
+     * Returns person of index in the group list
+     * <p>
      * also see {@link #findPerson(String)} to find by name
      *
-     * @param index of the group
-     * @return a Person or throws
+     * @param index the position of the person in the group
+     * @return the {@link Person} object at the index
      * @throws RuntimeException when index is out of bounds
      */
     public Person findPerson(int index){
