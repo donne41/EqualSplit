@@ -37,3 +37,5 @@ You also need to tell maven where to look elsewhere for packages.
         </repository>
     </repositories>
 ```
+
+This is quite slow but it gets the job done.
