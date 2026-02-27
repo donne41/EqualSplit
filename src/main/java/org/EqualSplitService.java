@@ -16,23 +16,42 @@ public class EqualSplitService {
         group.add(new Person(normalName, moneySpent));
     }
 
-    public void editPerson(String nameSearch, double newMoney) {
+    public double getPersonSpent(String inputName) {
+        if (inputValidation(inputName))
+            throw new RuntimeException("Invalid name");
+        String name = normalizeName(inputName);
+        Optional<Person> person = findPerson(name);
+        if (person.isPresent()) {
+            return person.get().getMoneySpent();
+        } else {
+            return -1;
+        }
+    }
+
+    public boolean editPerson(String nameSearch, double newMoney) {
         if (inputValidation(nameSearch, newMoney))
             throw new RuntimeException("Invalid name or money");
         String normalName = normalizeName(nameSearch);
         Optional<Person> person = findPerson(normalName);
         if (person.isPresent()) {
             person.get().setMoneySpent(newMoney);
+            return true;
+        } else {
+            return false;
         }
     }
 
-    public void removePerson(String name) {
+    public boolean removePerson(String name) {
         if (inputValidation(name))
             throw new RuntimeException("invalid name");
         String normalName = normalizeName(name);
         Optional<Person> person = findPerson(normalName);
-        if (person.isPresent())
+        if (person.isPresent()) {
             group.remove(person);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void calculate() {
@@ -43,7 +62,11 @@ public class EqualSplitService {
         return history;
     }
 
-    private Optional<Person> findPerson(String name) {
+    public List<Person> getGroup() {
+        return group;
+    }
+
+    public Optional<Person> findPerson(String name) {
         return group.stream().filter(
                         p -> p.getName().equals(name))
                 .findFirst();
