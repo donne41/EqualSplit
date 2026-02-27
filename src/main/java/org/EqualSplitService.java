@@ -47,7 +47,7 @@ public class EqualSplitService {
         String normalName = normalizeName(name);
         Optional<Person> person = findPerson(normalName);
         if (person.isPresent()) {
-            group.remove(person);
+            group.remove(person.get());
             return true;
         } else {
             return false;
@@ -70,6 +70,14 @@ public class EqualSplitService {
         return group.stream().filter(
                         p -> p.getName().equals(name))
                 .findFirst();
+    }
+
+    public Person findPerson(int index) throws RuntimeException {
+        try {
+            return group.get(index);
+        } catch (IndexOutOfBoundsException e) {
+            throw new RuntimeException("Index out of bounds when looking for person");
+        }
     }
 
     private boolean inputValidation(String name, double money) {
