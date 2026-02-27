@@ -16,6 +16,12 @@ public class EqualSplitService {
         group.add(new Person(normalName, moneySpent));
     }
 
+    /**
+     * Get a persons spending by searching for their name
+     *
+     * @param inputName search for name
+     * @return persons spending or -1 if no person is found.
+     */
     public double getPersonSpent(String inputName) {
         if (inputValidation(inputName))
             throw new RuntimeException("Invalid name");
@@ -28,6 +34,12 @@ public class EqualSplitService {
         }
     }
 
+    /**
+     * Edit a persons spending
+     * @param nameSearch find person by name
+     * @param newMoney set the new amount of expenditure
+     * @return True when person is found and money updated otherwise False
+     */
     public boolean editPerson(String nameSearch, double newMoney) {
         if (inputValidation(nameSearch, newMoney))
             throw new RuntimeException("Invalid name or money");
@@ -41,6 +53,11 @@ public class EqualSplitService {
         }
     }
 
+    /**
+     * Removes a person from the group list
+     * @param name of person to be removed
+     * @return True when person is removed otherwise returns False
+     */
     public boolean removePerson(String name) {
         if (inputValidation(name))
             throw new RuntimeException("invalid name");
@@ -66,13 +83,27 @@ public class EqualSplitService {
         return List.copyOf(group);
     }
 
+    /**
+     * <p>Streams through the list of people and matches by name</p>
+     * also se {@link #findPerson(int)} to find person by index
+     * @param name of person
+     * @return Optional Person or Optional Empty
+     */
     public Optional<Person> findPerson(String name) {
         return group.stream().filter(
                         p -> p.getName().equals(name))
                 .findFirst();
     }
 
-    public Person findPerson(int index) throws RuntimeException {
+    /**
+     * <p>Returns person of index in the group list</p>
+     * also see {@link #findPerson(String)} to find by name
+     *
+     * @param index of the group
+     * @return a Person or throws
+     * @throws RuntimeException when index is out of bounds
+     */
+    public Person findPerson(int index){
         try {
             return group.get(index);
         } catch (IndexOutOfBoundsException e) {
